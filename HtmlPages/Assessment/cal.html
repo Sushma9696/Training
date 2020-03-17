@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EMI Calculator</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <style>
+        a {
+            color: rgb(33, 33, 189);
+        }
+
+        button {
+            padding: 10px;
+            width: 100%;
+
+        }
+
+        .col-md-6 {
+            border: 1px solid whitesmoke;
+            background-color: rgb(211, 247, 247);
+        }
+
+        .container {
+            padding-top: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-dark bg-primary">
+
+        <img src="C:\Users\Lenovo\Desktop\HtmlPages\images\lo.png" alt="LOAN">
+        <div class="pos-f-t">
+            <div class="collapse" id="navbarToggleExternalContent">
+                <div class="bg-dark p-4">
+
+                    <ul>
+                        <li><a href="Login.html">Login</a></li>
+                        <li><a href="register.html">Register</a></li>
+                        <li><a href="loanForm.html">Loan Form</a></li>
+                        <li><a href="cal.html">EMI Calculator</a></li>
+                    </ul>
+                </div>
+            </div>
+            <nav class="navbar navbar-dark bg-dark">
+                <button class="navbar-toggler" type="button" data-toggle="collapse"
+                    data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </nav>
+        </div>
+    </nav>
+
+
+    </div>
+
+
+
+
+
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3"></div>
+            <div class="col-md-6">
+                <h4>EMI Calculator Form</h4>
+                <form class="mt-5" onclick="emi()">
+                    <div class="form-group">
+
+                        <p style="color: red;">Interest will be 5% of the Amount entered</p>
+                    </div>
+
+                    <div class="form-group">
+
+                        Amount:<input type="number" class="form-control" id="Amt" placeholder="Amount-in-Rupees"
+                            required>
+                    </div>
+                    <div class="form-group">
+
+                        Duration:<input type="number" class="form-control" id="Num" placeholder="Enter in Months Only"
+                            required>
+                    </div>
+                    <button type="button" class="btn btn-primary"
+                        style="background-color: orange; border:orange">OK</button>
+                    <p id="em"></p>
+                </form>
+
+            </div>
+            <div class="col-md-3"></div>
+        </div>
+    </div>
+
+
+    <script>
+
+        function emi() {
+
+            var amt = document.querySelector("#Amt");
+            var m = document.querySelector("#Num");
+            var i = amt.value * (5 / 100);
+
+            var et = parseInt(amt.value) + i;
+
+            var dpm = parseInt(et) / parseInt(m.value);
+
+            //alert("Total amount to be paid is:" + et + " " + "Amount to be paid per month is" + dpm);
+
+            // alert("Total amount to pay is" + et.value + "Amount to be paid per month is" + dpm.value);
+            // return "Total amount to pay is" + et + "Amount to be paid per month is" + dpm;
+            //return et;
+            document.getElementById("em").innerHTML = "Total amount to be paid is" + et + " " + "Amount to be paid per month is" + dpm;
+
+        }
+        document.getElementById("em").innerHTML = emi();
+
+
+
+    </script>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>

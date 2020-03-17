@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Application ID Generation</title>
+</head>
+
+<body>
+    ApplicationID:<input type="text" name="appId" id="randomApp">
+    <button id="Id">Generate ApplicationID</button>
+    <p id="p1"></p>
+    <script>
+        function random_generate() {
+            var chars = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+            var string_length = 12;
+            var randomstring = '';
+            for (var i = 0; i < string_length; i++) {
+                var rnum = Math.floor(Math.random() * chars.length);
+                randomstring += chars.substring(rnum, rnum + 1);
+            }
+            return randomstring;
+        }
+        //document.getElementById("p1").innerHTML = randomstring;
+        document.getElementById("Id").addEventListener("click", function () {
+            randomstring = random_generate();
+            document.getElementById("randomApp").value = randomstring;
+        }); 
+    </script>
+</body>
+
+</html>

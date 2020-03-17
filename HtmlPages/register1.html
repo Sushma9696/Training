@@ -1,0 +1,115 @@
+<html>
+    <head>
+        <title>Registration Page</title>
+        
+        <style>
+           table{
+                border: 1px solid aqua;
+                background-color: aqua;
+                }
+              /* input{
+                   padding: 50px;
+                   margin-bottom: 20px;
+               }*/
+            
+        </style>
+    </head>
+    <body><center>
+        <h2><u>Registration Form</u></h2>
+        <form>
+            <!--
+            <fieldset>
+                <legend><h2>Registration Form</h2></legend>-->
+        <table>
+            <!--
+        <tr><td align="center"><h2><u>Registration Form</u></h2></td></tr>-->
+        <tr>
+        <td><label for=fname>FirstName</label></td>
+        <td><input type=text name=fname placeholder="Enter first name" pattern="[a-zA-Z]" title="Enter alphabets only" required>
+        </td>
+        </tr>
+        <tr>
+        <td>
+        <label for=lname>LastName</label></td>
+        <td><input type=text name=lname placeholder="Enter last name" pattern="[a-zA-Z]" title="Enter alphabets only" required>
+        </td>
+        </tr>
+        <tr>
+        <td>
+        <label for=email>Email</label></td>
+        <td><input type=email name=email placeholder="Enter email address" pattern="[a-zA-Z0-9][@]{1}" required>
+        </td>
+        </tr>
+        <tr>
+        <td>
+        <label for=phone>Contact Number</label></td>
+        <td><input type=tel name=phone pattern="[7|8|9]{1}[0-9]{9}" required>
+        </td>
+        </tr>
+        <tr>
+        <td>
+        <label for=gender>Gender</label><br>
+        </td>
+        </tr>
+        <tr>
+        <td>
+        <input type=radio name=gender value=gender>Male</td>
+        <td><input type=radio name=gender value=gender>Female
+        </td>
+    </tr>
+    <tr>
+        <td>
+        <label for=dob><abbr title="Date Of Birth">DOB</abbr></label></td>
+        <td><input type="date" name=dob required>
+        </td>
+    </tr>
+    <tr>
+        <td>
+        <label for=add>Address</label></td>
+        <td><textarea name=add rows=5 cols=20 placeholder="Enter valid address" pattern="[a-zA-Z0-9/./-]" required></textarea>
+        </td>
+    </tr>
+    <tr>
+        <td>
+        <label for=uname>Enter Username</label></td>
+        <td><input type=text name=uname placeholder="Enter Username" pattern="[a-zA-Z0-9]" title="Enter combination of alphabets & numbers" required>
+        </td>
+    </tr>
+    <tr>
+        <td>
+        <label for=pwd>Enter Password</label></td>
+        <td>
+        <input type=password name=pwd placeholder="Enter Password" pattern="[\w\W\S]" required>
+        </td>
+    </tr>
+    <tr>
+        <td>
+        <label for=rpwd>Enter Password</label></td>
+        <td><input type=password name=rpwd placeholder="Re-enter Password" pattern="[\w\W\S]" required>
+        </td>
+    </tr>
+    <tr>
+        <td>
+        <input type="checkbox" name=c1 value=c1 checked> I agree terms and conditions
+        </td>
+    </tr>
+    <tr>
+        <td>
+        <input type="checkbox" name=c2 value=c2>Subscribe for latest updates
+        </td>
+    </tr>
+    <tr>
+        <td>
+        <input type="submit" value="Submit">
+        </td>
+    </tr>
+    <tr>
+        <td>
+        <small>Click <a href="login.html"><em>here</em></a> to login</small>
+        </td>
+    </tr>
+        </table>
+            <!--</fieldset>-->
+        </form>
+        </center></body>
+</html>

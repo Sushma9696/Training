@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex</title>
+    <style>
+        @media(min-width: 768px) {
+            .container {
+                display: flex;
+                align-items: flex-start;
+                /*removes unwanted space*/
+            }
+        }
+
+        .one {
+            flex: 2;
+            order: 2;
+            flex-shrink: 1;
+        }
+
+        .two {
+            flex: 2;
+            order: 3;
+            flex-grow: 4;
+            /*Increases the size of the box 4times the size of other two boxes*/
+
+        }
+
+        .three {
+            flex: 1;
+            order: 1;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="one">
+            <h2>Box1</h2>
+            <p>A quick and simplified answer is that Lorem Ipsum refers to text that the DTP (Desktop Publishing)
+                industry use as replacement text when the real text is not available.
+
+                For example, when designing a brochure or book, a designer will insert Lorem ipsum text if the real text
+                is not available. The Lorem ipsum text looks real enough that the brochure or book looks complete. The
+                book or brochure can be shown to the client for approval.
+
+                The important factor when using Lorem ipsum text is that the text looks realistic otherwise the brochure
+                or book will not look very good. Lorem Ipsum is dummy text which has no meaning however looks very
+                similar to real text.</p>
+        </div>
+        <div class="two">
+            <h2>Box2</h2>
+            <p>A quick and simplified answer is that Lorem Ipsum refers to text that the DTP (Desktop Publishing)
+                industry use as replacement text when the real text is not available.
+
+                For example, when designing a brochure or book, a designer will insert Lorem ipsum text if the real text
+                is not available. The Lorem ipsum text looks real enough that the brochure or book looks complete. The
+                book or brochure can be shown to the client for approval.
+
+                The important factor when using Lorem ipsum text is that the text looks realistic otherwise the brochure
+                or book will not look very good. Lorem Ipsum is dummy text which has no meaning however looks very
+                similar to real text.</p>
+        </div>
+        <div class="three">
+            <h2>Box3</h2>
+            <p>A quick and simplified answer is that Lorem Ipsum refers to text that the DTP (Desktop Publishing)
+                industry use as replacement text when the real text is not available.
+
+                For example, when designing a brochure or book, a designer will insert Lorem ipsum text if the real text
+                is not available. The Lorem ipsum text looks real enough that the brochure or book looks complete. The
+                book or brochure can be shown to the client for approval.
+
+                The important factor when using Lorem ipsum text is that the text looks realistic otherwise the brochure
+                or book will not look very good. Lorem Ipsum is dummy text which has no meaning however looks very
+                similar to real text.</p>
+        </div>
+    </div>
+
+</body>
+
+</html>

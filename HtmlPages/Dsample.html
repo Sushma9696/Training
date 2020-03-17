@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form onsubmit="validateUser()">
+        <input type="text" id="uname" placeholder="UserName" /><br>
+        <input type="password" id="pwd" placeholder="Password" /><br>
+        <input type="submit" value="submit" /><br>
+    </form>
+
+    <script>
+        function validateUser() {
+            //object creation
+            var userDetails = {};
+            var username = document.querySelector("#uname");
+            var passwd = document.querySelector("#pwd");
+
+            if (username.value == "testuser" && passwd.value == "abc@123") {
+
+                alert("Successfully logged in");
+            }
+            else {
+                alert("Invalid credentials");
+            }
+
+            //write
+            userDetails["key1"] = username;
+            userDetails["key2"] = passwd;
+
+            //Or
+            // userDetails.key1 = username;
+            //userDetails.key2 = passwd;
+
+            //Read
+            userDetails.key1;
+            userDetails.key2;
+
+            return userDetails;
+        }
+    </script>
+
+</body>
+
+</html>

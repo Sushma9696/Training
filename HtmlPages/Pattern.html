@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <!--Embedded CSS-->
+        <style>
+            p{
+                font-weight:bold
+            }
+        </style>
+    </head>
+    <body>
+        <label for=pin>Pincode</label>
+        <input type=text name="pin" pattern="[0-8]{6}"><br><br>
+        <!--List of countries using DataList-->
+        <center>Select Country:<input id="country_name" name="country_name" type="text" list="country"/>
+        <datalist id="country">
+            <option value="India">India</option>
+            <option value="Australia">Australia</option>
+            <option value="Africa">Africa</option>
+            <option value="Algeria">Algeria</option>
+            <option value="Angola">Angola</option>
+        </datalist>
+        </center>
+        <br><br><br>
+        <center>
+            <!--Search box-->
+            Search:<input id="mysearch" type="search"/><br><br>
+            <!--Number min & max to a field-->
+            UserId:<input id="user_lic" type="number" min="5" max="30" step="5" value=""/><br><br>
+            <!--Slider-->
+            Slider:<input id="test" type="range"/>
+            <!--Inline CSS
+            <p style="font-weight:bold">This is bold text</p>-->
+            <p>Hello</p>
+        </center>
+    </body>
+</html>
